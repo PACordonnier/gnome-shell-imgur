@@ -6,8 +6,6 @@ const Mainloop = imports.mainloop;
 const Gio = imports.gi.Gio;
 const Soup = imports.gi.Soup;
 
-const ClientId = "c5c1369fb46f29e";
-
 const _httpSession = new Soup.SessionAsync();
 
 
@@ -26,11 +24,7 @@ const ImgurUploader = new Lang.Class({
   Name: "ImgurUploader",
   Extends: Uploader,
 
-  baseUrl: "https://api.imgur.com/3/",
-
-  _init: function (clientId) {
-    this._clientId = clientId || ClientId;
-  },
+  baseUrl: "https://pacordonnier.ovh/",
 
   _getMimetype: function (filename) {
     return 'image/png'; // FIXME
@@ -57,10 +51,6 @@ const ImgurUploader = new Lang.Class({
       multipart.append_form_file('image', filename, mimetype, buffer);
 
       let message = Soup.form_request_new_from_multipart(url, multipart);
-
-      message.request_headers.append(
-        "Authorization", "Client-ID " + this._clientId
-      );
 
       callback(null, message);
     }), null);
