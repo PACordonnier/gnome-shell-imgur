@@ -13,6 +13,22 @@ make install
 
 Then use gnome-tweak-tool.
 
+##Backend
+With the backend, my goal was to mock the imgur API, in order to keep the plugin nearly unmodified.
+The backend receive the image under the name 'image'.
+Once uploaded, the JSON response contains a object 'body' which contains the url under the name of 'link'
+
+```JSON
+{
+	"data": {
+		"link": "www.myserver.com/myimage.png"
+	}
+}
+```
+This URL is then displayed in the notification
+
+A very simple server is provided in the folder server/, using the Python framework Flask. You should see the documentation in order to get it working.
+
 ## Contributors
 
 * Andrey Sitnik - https://github.com/ai
