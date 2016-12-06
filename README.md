@@ -6,8 +6,8 @@ Uploads screenshots directly to your backend and displays URL.
 The latest development version can be installed manually with these commands:
 
 ```sh
-git clone https://github.com/PACordonnier/gnome-shell-imgur.git
-cd gnome-shell-imgur
+git clone https://github.com/PACordonnier/gnome-shell-upload-screenshot.git
+cd gnome-shell-upload-screenshot
 make install
 ```
 
