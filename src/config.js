@@ -1,9 +1,9 @@
 /*jshint moz:true */
 // vi: sts=2 sw=2 et
 
-const IndicatorName = 'de.ttll.ImgurUploader';
+const IndicatorName = 'fr.pacordonnier.ScreenshotUploader';
 
-const SettingsSchema = 'org.gnome.shell.extensions.imgur';
+const SettingsSchema = 'org.gnome.shell.extensions.uploadscreenshot';
 
 const KeyEnableIndicator = 'enable-indicator';
 const KeyClickAction = 'click-action';
